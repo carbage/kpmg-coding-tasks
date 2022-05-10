@@ -4,12 +4,11 @@ aws configure
 
 ## Task 1
 Write-Output "Task 1 - Build 3 tier environment"
-$plan = "plan.out"
 terraform fmt --recursive
 terraform init
 terraform validate
-terraform plan -out=$plan
-terraform apply $plan
+terraform plan -out="plan.out"
+terraform apply "plan.out"
 
 ## Task 2
 Write-Output "Task 2 - Output instance metadata in JSON format"
