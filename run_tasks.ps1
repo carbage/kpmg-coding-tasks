@@ -5,6 +5,7 @@ aws configure
 ## Task 1
 Write-Output "Task 1 - Build 3 tier environment"
 $plan = "plan.out"
+terraform fmt --recursive
 terraform validate
 terraform plan -out=$plan
 terraform apply $plan
